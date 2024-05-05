@@ -1,0 +1,629 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(0, 128, 128, 0.8);
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: darkturquoise;
+}
+
+.navbar .navbar-logo span {
+  color: gold;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav .daftar {
+  color: yellow;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  padding: 5px 20px;
+  border-radius: 0.6rem;
+  background-color: rgb(57, 201, 201);
+}
+
+.navbar .navbar-nav a:hover {
+  color: gray;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: gray;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/*hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  background-image: url(img/DSC_7042.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: change 35s infinite ease-in-out;
+  overflow: visible;
+  position: relative;
+}
+
+@keyframes change {
+  0% {
+    background-image: url(img/DSC_7042.JPG);
+  }
+  20% {
+    background-image: url(img/DSC_7024.png);
+  }
+  40% {
+    background-image: url(img/IMG_9133.png);
+  }
+  60% {
+    background-image: url(img/IMG_9143.JPG);
+  }
+  80% {
+    background-image: url(img/DSC_7074.png);
+  }
+  100% {
+    background-image: url(img/DSC_7042.JPG);
+  }
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  margin-bottom: 0;
+  max-width: 60rem;
+  text-align: justify;
+  align-items: justify;
+  position: center;
+}
+
+.hero .content h1 {
+  font: 14rem;
+  color: gold;
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: rgb(57, 201, 201);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: black;
+  color: white;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: darkcyan;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta:hover {
+  background-color: rgb(120, 120, 245);
+}
+
+/* about section*/
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+.about .row .about-img img {
+  width: 100%;
+  border-radius: 10%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 0rem;
+  text-align: justify;
+}
+
+.about .row .content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  margin-left: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+  margin-left: 1rem;
+  color: teal;
+}
+
+.about .content .cta {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: darkcyan;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.about .content .cta:hover {
+  background-color: darkblue;
+}
+
+.about .content h3 {
+  color: teal;
+}
+
+.about .content .kepala {
+  color: cornflowerblue;
+  font-size: 1rem;
+}
+
+/*menu and about*/
+
+.menu,
+.about {
+  padding: 10rem 7% 1.4rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+.menu h2,
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: rgb(255, 211, 129);
+  text-shadow: #513c28;
+}
+
+.menu h2 span,
+.about h2 span {
+  color: darkcyan;
+}
+
+.menu .row,
+.about .row {
+  display: inline-flex;
+}
+
+/*menu*/
+
+.menu .row {
+  flex: 1 1 45rem;
+}
+
+.menu .row {
+  width: 100%;
+}
+
+.menu .row .content {
+  flex: 1 1 35rem;
+  padding: 1 0rem;
+  text-align: justify;
+  align-items: center;
+  align-content: center;
+}
+
+.menu .row .content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: -15rem;
+  margin-left: 1rem;
+  color: teal;
+}
+
+.menu .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+  margin-left: 1rem;
+  color: teal;
+}
+
+.menu .content .cta {
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: darkcyan;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.menu .content .cta:hover {
+  background-color: darkblue;
+}
+.container-menu {
+  margin-top: 250px;
+  display: flex;
+  width: 85vmin;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 20%;
+  overflow: hidden;
+  border: 200px;
+  border-radius: 8px;
+  box-shadow: 10px 20px 30px rgba(30, 30, 200, 0.3);
+}
+.wrapper-menu {
+  width: 100%;
+  display: flex;
+  position: relative;
+  animation: slide 16s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+img {
+  width: 100%;
+}
+/*Pelajaran atau menu */
+.pelajaran,
+.satunya {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: cadetblue;
+  font-size: 1.4rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.satunya h2 {
+  margin-top: 100px;
+}
+
+.satunya p {
+  text-align: center;
+  color: darkcyan;
+  font-size: medium;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.satunya .cta {
+  margin-top: 3rem;
+  margin-left: 1rem;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: darkcyan;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.satunya .cta:hover {
+  background-color: darkblue;
+}
+
+.pelajaran h3 {
+  margin-top: 10px;
+}
+table {
+  border-collapse: collapse;
+  position: relative;
+  margin: auto;
+  color: rgb(13, 17, 11);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+table th,
+table td {
+  border: 1px solid darkblue;
+  padding: 7px 17px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+table th {
+  background-color: darkcyan;
+}
+
+/*contact*/
+/*contact section*/
+.contact {
+  padding: 10rem 7% 1.4rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: teal;
+}
+
+.contact h2 span {
+  color: rgb(255, 211, 129);
+  text-shadow: #513c28;
+}
+
+.contact .row {
+  display: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: gainsboro;
+  border-radius: 1rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row p {
+  margin: 1rem 0.3rem;
+}
+
+.contact .row .baris a {
+  color: darkcyan;
+}
+
+.contact .row .baris p {
+  align-items: center;
+}
+
+.contact .row .baris a:hover {
+  color: blue;
+}
+.contact p {
+  text-align: center;
+  max-width: 100%;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.6;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/*footer */
+footer {
+  background-color: teal;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .sosials {
+  padding: 1rem 0;
+}
+
+footer .sosials a {
+  color: white;
+  margin: 1rem;
+}
+
+footer .sosials a:hover,
+footer .links a:hover {
+  color: darkcyan;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: white;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: turquoise;
+  font-weight: 700;
+}
+
+footer .credit a:hover {
+  color: darkgreen;
+  font-weight: 700;
+}
+
+footer .credit p {
+  color: white;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    right: -100%;
+    top: 100%;
+    background-color: teal;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: cyan;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .menu h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .menu .row {
+    display: block;
+  }
+
+  .menu .row .content h3 {
+    margin-top: -200px;
+  }
+  .menu .row .container-menu {
+    margin-bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: 50%;
+    margin-left: 30%;
+  }
+
+  .about h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .about .row {
+    display: block;
+  }
+
+  .about.row .content h3 {
+    margin-top: -200px;
+  }
+  .menu .row .container-menu {
+    margin-bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: 50%;
+    margin-left: 30%;
+  }
+}
+/*mobile Phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+    .menu h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .menu .row {
+      display: block;
+    }
+
+    .menu .row .content h3 {
+      margin-top: -100px;
+    }
+    .menu .row .container-menu {
+      margin-bottom: 0;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      margin-top: 50%;
+      margin-left: 30%;
+    }
+  }
+}
